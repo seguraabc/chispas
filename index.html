@@ -8,25 +8,29 @@
 <body>
     <div class="container">
         <div class="circle">
-            <video class="animated-video" id="myVideo">
+            <video class="animated-video" id="myVideo" loop style="display: none;">
                 <source src="animacion/a_drawing of a brain enlarging.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de videos.
             </video>
         </div>
-        <button id="startButton">Iniciar Video</button>
+        <button id="startButton" onclick="startVideo()">INGRESAR</button>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const video = document.querySelector(".animated-video");
+        function startVideo() {
             const startButton = document.getElementById("startButton");
-
-            startButton.addEventListener("click", function() {
-                video.play(); // Inicia la reproducción del video al hacer clic en el botón
-            });
-        });
+            startButton.style.display = "none";
+            const video = document.querySelector(".animated-video");
+            video.style.display = "block";
+            video.play();
+        }
     </script>
 </body>
 </html>
+
+
+
+
+
 
 
 

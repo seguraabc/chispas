@@ -11,31 +11,52 @@ body {
 
 .container {
     position: relative;
-    width: 70%; /* Ajusta al ancho de la pantalla */
-    height: 70%; /* Ajusta al alto de la pantalla */
+    width: 70%;
+    height: 70%;
     overflow: hidden;
 }
 
 .circle {
-    width: 300px; /* Tamaño del círculo */
-    height: 300px; /* Tamaño del círculo */
-    border-radius: 50%; /* Hace que el contenedor sea un círculo */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     overflow: hidden;
-    position: relative; /* Cambia a "relative" para centrar el video */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    position: relative;
+    margin: 0 auto;
 }
 
 .animated-video {
-    width: 100%; /* Ajusta al círculo */
-    height: 100%; /* Ajusta al círculo */
-    object-fit: cover; /* Ajusta el video al tamaño del contenedor */
-    position: absolute; /* Cambia a "absolute" para ajustar el video */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto; /* Centra el video en el contenedor circular */
+    margin: auto;
 }
+
+#startButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3498db;
+    color: white;
+    font-size: 24px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#startButton:hover {
+    background-color: #2980b9;
+}
+
+
 
 
 
