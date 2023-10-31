@@ -10,15 +10,15 @@ body {
 }
 
 .container {
-    position: relative;
-    width: 70%;
-    height: 70%;
+    position: center;
+    width: 50%;
+    height: 50%;
     overflow: hidden;
 }
 
 .circle {
-    width: 300px;
-    height: 300px;
+    width: 100%; /* Ajusta al 100% del contenedor */
+    padding-top: 100%; /* Mantiene la relación 1:1 para la forma circular */
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -26,15 +26,14 @@ body {
 }
 
 .animated-video {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Ajusta al 100% del contenedor circular */
+    height: 100%; /* Ajusta al 100% del contenedor circular */
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+    transform: scale(0); /* Escala inicial al 80% */
+    transition: transform 4s; /* Duración de la animación */
 }
 
 #startButton {
@@ -47,17 +46,16 @@ body {
     font-size: 24px;
     padding: 20px 40px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.6s;
 }
 
 #startButton:hover {
     background-color: #2980b9;
 }
 
-
-
-
-
-
+.zoom-in {
+    transform: scale(0.2); /* Escala al 100% al hacer clic */
+    
+}
