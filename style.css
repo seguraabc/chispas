@@ -9,7 +9,7 @@ body {
     overflow: hidden;
 }
 
-.container {
+.container1 {
     position: center;
     width: 100%;
     height: 100%;
@@ -27,16 +27,24 @@ body {
     
 }
 
-/*.animated-video {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scale(0); /* Escala inicial al 80% 
-    transition: transform 4s; }/* Duración de la animación */
+.container2 {
+    background-color: #52504c;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
 
+.hidden-image {
+    opacity: 0;
+    transition: opacity 2s; /* Duración de la animación */
+}
+
+.hidden {
+    opacity: 1;
+}
 
 .animated-video {
     max-width: 100%;
