@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+            <video class="animated-video" id="myVideo">
+                <source src="animacion/a_drawing of a brain enlarging.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <button id="startButton">Iniciar Video</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.querySelector(".animated-video");
+            const startButton = document.getElementById("startButton");
+
+            startButton.addEventListener("click", function() {
+                video.play(); // Inicia la reproducción del video al hacer clic en el botón
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+    
+
+

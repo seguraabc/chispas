@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: violet;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 70%; /* Ajusta al ancho de la pantalla */
+    height: 70%; /* Ajusta al alto de la pantalla */
+    overflow: hidden;
+}
+
+.circle {
+    width: 300px; /* Tamaño del círculo */
+    height: 300px; /* Tamaño del círculo */
+    border-radius: 50%; /* Hace que el contenedor sea un círculo */
+    overflow: hidden;
+    position: relative; /* Cambia a "relative" para centrar el video */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.animated-video {
+    width: 100%; /* Ajusta al círculo */
+    height: 100%; /* Ajusta al círculo */
+    object-fit: cover; /* Ajusta el video al tamaño del contenedor */
+    position: absolute; /* Cambia a "absolute" para ajustar el video */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; /* Centra el video en el contenedor circular */
+}
+
+
+
+
