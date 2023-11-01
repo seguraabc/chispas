@@ -7,20 +7,14 @@
 </head>
 <body>
     <div class="container1">
-        <div class="container2">
-            <img class="hidden-image" src="images/isologo.png" alt="Imagen oculta">
-        </div>
-        <script>
-            setTimeout(function() {
-                const hiddenImage = document.querySelector(".hidden-image");
-                hiddenImage.classList.remove("hidden");
-            }, 3000); // 5000 milisegundos = 5 segundos
-        </script>
         <div class="circle">
             <video class="animated-video" id="myVideo" loop>
                 <source src="animacion/a_drawing of a brain enlarging.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de videos.
             </video>
+        </div>
+        <div class="image-container">
+            <img class="hidden-image" src="images/isologo.png" alt="Imagen oculta">
         </div>
         <button id="startButton" onclick="startVideo()">INGRESAR</button>
     </div>
@@ -31,28 +25,12 @@
             const video = document.querySelector(".animated-video");
             video.style.display = "block";
             video.play();
-            video.classList.add("zoom-in"); // Agrega la clase para la animación
+            video.classList.add("zoom-in");
+            setTimeout(function() {
+                const hiddenImage = document.querySelector(".hidden-image");
+                hiddenImage.classList.add("visible");
+            }, 5000); // 5000 milisegundos = 5 segundos
         }
     </script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
