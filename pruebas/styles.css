@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffff;
+}
+
+.network {
+    display: flex;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-image: url('red-neuronal.png'); /* Reemplazar 'ruta_de_la_imagen_de_fondo.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
+    background-position: center; /* Centrar la imagen de fondo */
+}
+
+.point {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+}
+
+#point1 { top: 56px; left: 50px; }
+#point2 { top: 46px; left: 230px; }
+#point3 { top: 214px; left: 369px; }
+#point4 { top: 322px; left: 262px; }
+#point5 { top: 280px; left: 92px; }
