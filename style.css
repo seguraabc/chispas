@@ -32,13 +32,15 @@ body {
 .hidden-image {
     opacity: 0;
     transition: opacity 2s, transform 2s;   
+    transform: scale(3); /* Inicialmente más grande */
     top: 0;
 
 }
 
-
 .visible {
     opacity: 1;
+    transform: scale(0.5); /* Vuelve al tamaño original */
+    margin-top: 15px;
 }
 
 /* Contenedor de imagen centrado */
