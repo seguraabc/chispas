@@ -1,3 +1,4 @@
+/* Estilos del contenedor principal */
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ body {
     overflow: hidden;
 }
 
+/* Contenedor de la animación de video */
 .container1 {
     position: relative;
     width: 100%;
@@ -16,6 +18,7 @@ body {
     overflow: hidden;
 }
 
+/* Contenedor circular de video */
 .circle {
     width: 100%;
     padding-top: 100%;
@@ -25,19 +28,46 @@ body {
     margin: auto;
 }
 
+/* Imagen oculta */
 .hidden-image {
     opacity: 0;
-    transition: opacity 2s;
-    position: absolute;
+    transition: opacity 2s, transform 2s;   
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+
 }
+
 
 .visible {
     opacity: 1;
 }
 
+/* Contenedor de imagen centrado */
+.centered {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+   
+
+}
+
+/* CSS adicional para reducir el tamaño de la imagen y mantenerla arriba */
+.shrink {
+    transform: scale(0.5); /* Escala a la mitad en ambos ejes */
+    transform-origin: top center; /* Establece el origen de la transformación en la parte superior y el centro */
+    transition: transform 2s;
+}
+
+/* CSS para la animación de desaparición */
+.disappear {
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: top; /* Establece el origen de la transformación en la parte superior */
+    transition: opacity 5s, transform 5s ease-in;
+}
+
+
+/* Estilos del video */
 .animated-video {
     max-width: 100%;
     max-height: 100%;
@@ -48,9 +78,11 @@ body {
     top: 0;
     left: 0;
     transform: scale(0);
-    transition: transform 4s;
+    transition: opacity 2.5s, transform 2.5s ease-in;
+    border-radius: 30%;
 }
 
+/* Estilos del botón de inicio */
 #startButton {
     position: absolute;
     top: 50%;

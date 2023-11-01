@@ -13,24 +13,30 @@
                 Tu navegador no soporta la reproducción de videos.
             </video>
         </div>
-        <div class="image-container">
-            <img class="hidden-image" src="images/isologo.png" alt="Imagen oculta">
+        <div class="image-container centered">
+            <img class="hidden-image shrink" src="images/isologo.png" alt="Imagen oculta" >
         </div>
         <button id="startButton" onclick="startVideo()">INGRESAR</button>
     </div>
     <script>
+        // Cuando se hace clic en el botón "INGRESAR"
         function startVideo() {
             const startButton = document.getElementById("startButton");
             startButton.style.display = "none";
+
             const video = document.querySelector(".animated-video");
             video.style.display = "block";
-            video.play();
             video.classList.add("zoom-in");
+
             setTimeout(function() {
                 const hiddenImage = document.querySelector(".hidden-image");
                 hiddenImage.classList.add("visible");
-            }, 5000); // 5000 milisegundos = 5 segundos
+                video.classList.add("disappear");
+                hiddenImage.classList.add("shrink");
+            }, 5000); // 5 segundos de retraso
         }
+
     </script>
 </body>
 </html>
+
