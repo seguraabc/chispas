@@ -37,7 +37,20 @@
                 hiddenImage.classList.add("shrink");
             }, 5000); // 5 segundos de retraso
         }
+            
+        elementsWithTransitions.forEach(element => {
+            element.addEventListener("transitionend", () => {
+                transitionsEnded++;
 
+                // Cuando todas las transiciones han terminado
+                if (transitionsEnded === elementsWithTransitions.length) {
+                    // Redirige a la página "menu.html" después de un tiempo (por ejemplo, 2 segundos)
+                    setTimeout(function() {
+                        window.location.href = "menu.html";
+                    }, 2000); // 2000 milisegundos = 2 segundos
+                }
+            });
+        });
     </script>
 </body>
 </html>
