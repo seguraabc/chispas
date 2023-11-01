@@ -1,0 +1,26 @@
+/* Estilos del contenedor principal */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffff;
+    overflow: hidden;
+}
+
+/* Contenedor de imagen centrado */
+.centered {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.cabecera{
+    width: 170px;   
+    height: 170px; 
+    margin-top: 15px;
+}

@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cerebro</title>
 </head>
 <body>
     <div class="container1">
@@ -35,9 +36,12 @@
                 hiddenImage.classList.add("visible");
                 video.classList.add("disappear");
                 hiddenImage.classList.add("shrink");
-            }, 5000); // 5 segundos de retraso
+            }, 3000); // 3 segundos de retraso
         }
-            
+        // Espera a que todas las transiciones hayan terminado
+        const elementsWithTransitions = document.querySelectorAll(".animated-video, .hidden-image");
+        let transitionsEnded = 0;
+
         elementsWithTransitions.forEach(element => {
             element.addEventListener("transitionend", () => {
                 transitionsEnded++;
@@ -47,10 +51,10 @@
                     // Redirige a la página "menu.html" después de un tiempo (por ejemplo, 2 segundos)
                     setTimeout(function() {
                         window.location.href = "menu.html";
-                    }, 2000); // 2000 milisegundos = 2 segundos
+                    }, 500); // 500 milisegundos = 1/2 segundo
                 }
             });
-        });
+        });          
     </script>
 </body>
 </html>
